@@ -1,11 +1,10 @@
 from RBVerify import *
 from generate_random_characters import *
 
-trials = 100
+trials = 1000
 
 bst = RBTree()
 bst_verify = RBVerify()
-bst_verify.check_assertions(bst)
 
 for i in range(trials):
     # Get a character stream which is of length 2. This is the value to insert into the tree

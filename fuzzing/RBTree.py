@@ -201,7 +201,7 @@ class RBTree():
             if node.val == key :
                 z = node
 
-            if node.val <= key :
+            if node.val < key :                           # Error should be <= !!
                 node = node.right
             else :
                 node = node.left

@@ -22,10 +22,10 @@ class RBVerify():
         visited = set()
         if root == None:
             return
-        if root not in visited:
-            visited.add(root)
-        else:
-            assert "CYCLIC!"
+        
+        assert root not in visited
+        visited.add(root)
+
         self.acyclic(root.left)
         self.acyclic(root.right)
     
@@ -43,10 +43,8 @@ class RBVerify():
         if root == None:
             return
         if root.color == 1:
-            if root.left is not None and root.left.color == 1:
-                assert "No two consecutive reds!"
-            if root.right is not None and root.right.color == 1:
-                assert "No two consecutive reds!"
+            assert root.left is not None and root.left.color == 0
+            assert root.right is not None and root.right.color == 0
         self.red_property(root.left)
         self.red_property(root.right)
     
@@ -61,8 +59,7 @@ class RBVerify():
             # Set this static variable for first time
             if RBVerify.tree_depth == -1:
                 RBVerify.tree_depth = depth
-            if RBVerify.tree_depth != depth:
-                assert "Unequal black nodes on different paths!"
+            assert RBVerify.tree_depth == depth
         self.depth_property(root.left, depth)
         self.depth_property(root.right, depth)
 
@@ -74,6 +71,7 @@ class RBVerify():
         self.acyclic(root)
         self.leaf_is_black(root)
         self.red_property(root)
+        RBVerify.tree_depth = -1
         self.depth_property(root, 0)
         return True
 
