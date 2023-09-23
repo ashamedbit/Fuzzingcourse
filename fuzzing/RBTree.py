@@ -142,7 +142,7 @@ class RBTree():
                     self.LR ( x.parent )                  # Call for left rotate on parent of x
                     s = x.parent.right
                 # If both the child are black
-                if s.left.color == 0 and s.right.color == 0 :
+                if s.left is not None and s.left.color == 0 and s.right.color == 0 :
                     s.color = 1                           # Set color of s as red
                     x = x.parent
                 else :

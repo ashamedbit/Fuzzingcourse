@@ -63,7 +63,7 @@ class RBVerify():
         self.depth_property(root.left, depth)
         self.depth_property(root.right, depth)
 
-    def check_assertions(self, tree):
+    def repOK(self, tree):
         root = tree.root
         #Insert code to check assertions below
         self.root_assertion(root)

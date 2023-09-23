@@ -19,4 +19,4 @@ for i in range(trials):
 # How does the tree look after these insertions?
 bst.print_tree()
 # Verify assertions of Red Black tree
-bst_verify.check_assertions(bst)
+bst_verify.repOK(bst)
