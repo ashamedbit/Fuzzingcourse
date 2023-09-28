@@ -74,5 +74,3 @@ class RBVerify():
         RBVerify.tree_depth = -1
         self.depth_property(root, 0)
         return True
-
-
