@@ -13,7 +13,9 @@ for i in range(trials):
     choice = int(fuzzer(1, ord('0') , 2))
     if choice == 0:
         bst.insertNode(data)
+        print("Inserted "+ str(data))
     else:
+        print("Deleting "+ str(data))
         bst.delete_node(data)
 
 # How does the tree look after these insertions?

@@ -146,7 +146,7 @@ class RBTree():
                     s.color = 1                           # Set color of s as red
                     x = x.parent
                 else :
-                    if s.right.color == 0 :               # If right child of s is black
+                    if s.right is not None and s.right.color == 0 :   # If right child of s is black
                         s.left.color = 0                  # set left child of s as black
                         s.color = 1                       # set color of s as red
                         self.RR ( s )                     # call right rotation on x
@@ -154,7 +154,8 @@ class RBTree():
 
                     s.color = x.parent.color
                     x.parent.color = 0                    # Set parent of x as black
-                    s.right.color = 0
+                    if s.right is not None:
+                        s.right.color = 0
                     self.LR ( x.parent )                  # call left rotation on parent of x
                     x = self.root
             else :                                        # If x is right child of its parent
@@ -165,7 +166,7 @@ class RBTree():
                     self.RR ( x.parent )                  # Call for right rotate on parent of x
                     s = x.parent.left
 
-                if s.right.color == 0 and s.right.color == 0 :
+                if s.right is not None and s.right.color == 0 and s.right.color == 0 :
                     s.color = 1
                     x = x.parent
                 else :

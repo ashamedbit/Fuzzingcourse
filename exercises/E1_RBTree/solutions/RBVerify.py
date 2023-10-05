@@ -43,8 +43,10 @@ class RBVerify():
         if root == None:
             return
         if root.color == 1:
-            assert root.left is not None and root.left.color == 0
-            assert root.right is not None and root.right.color == 0
+            if root.left is not None:
+                assert root.left.color == 0
+            if root.right is not None:
+                assert root.right.color == 0
         self.red_property(root.left)
         self.red_property(root.right)
     
