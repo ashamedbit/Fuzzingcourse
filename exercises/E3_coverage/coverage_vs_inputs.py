@@ -9,6 +9,7 @@ from coverage import *
 
 trials = 100
 
+# function to generate a number of inputs indicated by variable trials
 def hundred_inputs() -> List[str]:
     population = []
     for i in range(trials):
@@ -23,6 +24,10 @@ average_coverage = sum_coverage
 
 # Implement logic to obtain coverage of cgi_decode over hundred random inputs
 # Then repeat experiment for 100 runs and obtain average_coverage
+# YOUR CODE GOES HERE
+
+
+# Plotting generated coverage
 
 import matplotlib.pyplot as plt
 
