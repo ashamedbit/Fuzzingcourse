@@ -17,7 +17,7 @@ RUN git config --global core.fileMode false && \
 ENV PIP_ROOT_USER_ACTION=ignore
 
 RUN apt-get update -y \
-    && apt-get install -y python3-pip
+    && apt-get install -y python3-pip mypy
 RUN pip install --upgrade pip
 
 COPY . /Fuzzingcourse
