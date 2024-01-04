@@ -17,9 +17,9 @@ trials = 100
 def population_coverage(population: List[str], function: Callable) \
         -> Tuple[Set[LocationEvent], List[int]]:
     cumulative_coverage: List[int] = []
-    # Set of all covered lines. Can be used for tracking
+    # Set of all covered lines. Can be used for tracking lines
     all_coverage = set()
-
+    # INSERT CODE HERE
     return all_coverage, cumulative_coverage
 
 # function to generate a number of inputs indicated by variable trials
