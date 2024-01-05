@@ -1,4 +1,4 @@
-from coverage import *
+from Coverage import Coverage
 
 def cgi_decode(s: str) -> str:
     """Decode the CGI-encoded string `s`:
