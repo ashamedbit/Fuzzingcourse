@@ -2,7 +2,7 @@ import inspect
 import sys
 from types import FrameType, TracebackType
 
-from typing import Any, Callable, List, Optional, Set, Tuple, Type
+from typing import Any, Callable, Optional, Set, Tuple, Type
 
 class Coverage:
     """Track coverage within a `with` block. Use as

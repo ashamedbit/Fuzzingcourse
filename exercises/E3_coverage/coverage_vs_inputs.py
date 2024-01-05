@@ -1,6 +1,6 @@
 
 
-from typing import Any, Callable, List, Optional, Set, Tuple, Type
+from typing import Any, Callable, Optional, Set, Tuple, Type
 
 from matplotlib.backend_bases import LocationEvent
 from generate_random_characters import fuzzer
@@ -14,16 +14,16 @@ trials = 100
 # For example if population is ["a*b", "a/b", "a-b"]
 # And assuming the coverage of each of these input strings in order is [3, 4, 5],
 # Then the cumulative coverage is [3, 7, 9]
-def population_coverage(population: List[str], function: Callable) \
-        -> Tuple[Set[LocationEvent], List[int]]:
-    cumulative_coverage: List[int] = []
+def population_coverage(population: list, function: Callable) \
+        -> Tuple[Set[LocationEvent], list]:
+    cumulative_coverage: list = []
     # Set of all covered lines. Can be used for tracking lines
     all_coverage = set()
     # INSERT CODE HERE
     return all_coverage, cumulative_coverage
 
 # function to generate a number of inputs indicated by variable trials
-def hundred_inputs() -> List[str]:
+def hundred_inputs() -> list:
     population = []
     for i in range(trials):
         population.append(fuzzer())
