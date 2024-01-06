@@ -57,7 +57,7 @@ for run in range(runs):
 for i in range(trials):
     average_coverage[i] = (sum_coverage[i] / runs)
 
-import matplotlib.pyplot as plt
+import plotext as plt
 
 plt.plot(average_coverage)
 plt.title('Coverage of cgi_decode() with random inputs')

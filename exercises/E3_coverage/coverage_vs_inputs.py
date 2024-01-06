@@ -51,7 +51,7 @@ for i in range(trials):
 
 # Plotting generated coverage
 
-import matplotlib.pyplot as plt
+import plotext as plt
 
 plt.plot(average_coverage)
 plt.title('Coverage of cgi_decode() with random inputs')
