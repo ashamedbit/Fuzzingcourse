@@ -17,8 +17,8 @@ RUN git config --global core.fileMode false && \
 ENV PIP_ROOT_USER_ACTION=ignore
 
 RUN apt-get update -y \
-    && apt-get install -y python3-pip mypy w3m matplotlib plotext 
-RUN pip3 install coverage
+    && apt-get install -y python3-pip mypy w3m
+RUN pip3 install coverage matplotlib plotext
 
 COPY . /Fuzzingcourse
 
